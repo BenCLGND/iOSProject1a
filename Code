@@ -1,0 +1,78 @@
++//
+// Project 1a
+// iOS Spring 2018
+//
+//  Benjamin Clark
+//  bmc132@zips.uakron.edu
+let maxStudents = 24
+let currentStudents = 25
+
+let longLabel = """
+There are \(currentStudents) in the class currently!
+Such a nice number!
+"""
+
+print(longLabel)
+
+let longLabel2 = """
+There can be a total of \(maxStudents) in the class.
+Hello World!
+"""
+
+print(longLabel2)
+
+if currentStudents < maxStudents {
+    print("There is still room for \(maxStudents-currentStudents)!")
+} else if currentStudents == maxStudents {
+    print("Sorry! The class is full!")
+} else {
+    print("Oh my, it seems we have too many students!")
+}
+
+let studentNames = ["Jim", "Bob", "Mike"]
+
+for name in studentNames {
+    print(name)
+}
+
+for name in studentNames {
+    switch name {
+    case studentNames[0]:
+        print(String(name.reversed()))
+     case studentNames[1]:
+        print(String(name.reversed()))
+    case studentNames[2]:
+        print(String(name.reversed()))
+    default:
+        print("Error")
+    }
+}
+
+func maxStudentsFunc() -> Int{
+    return maxStudents
+}
+
+print((maxStudentsFunc()))
+
+func getGroucho(nameArray: [String]) -> String  {
+    for name in nameArray {
+        if name == "Groucho" {
+            return "Groucho"
+        }
+    }
+    
+    return ""
+}
+
+print(getGroucho(nameArray: studentNames))
+
+func findGroucho(nameFound: String, nameArray: [String]) -> String?{
+    for name in nameArray {
+        if name == "Groucho" {
+            return "Groucho"
+        }
+    }
+
+    return nil
+}
+
